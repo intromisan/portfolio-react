@@ -1,15 +1,24 @@
-import React from 'react';
+import React from "react";
+import {NavLink} from 'react-router-dom';
 
 const Nav = () => {
-    return (
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-            </ul>
-        </nav>
-    )
-}
+  return (
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <NavLink exact activeStyle={{textDecoration: 'underline'}} to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink activeStyle={{textDecoration: 'underline'}} to="/portfolio">Portfolio</NavLink>
+          </li>
+          <li>
+            <NavLink activeStyle={{textDecoration: 'underline'}} to="/about">About Me</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Nav;
